@@ -34,10 +34,16 @@ Experiment with colors, typography, spacing, and component styles.
   --primary-80: #486284;
   --primary-50: #9CB0C9;
   --primary-25: #CED7E4;
-  --grey: #EBEFF4;
-  --white: #fff;
+  
+  
   
   /* You can add more custom colors here */
+--white: #fff;
+--grey: #EEEEEE;
+--black: #000000;
+--green: #47BC6D;
+--red: #E24B29;
+--blue: #3E44F4;
 
 }
 

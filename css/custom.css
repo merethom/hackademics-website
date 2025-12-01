@@ -56,25 +56,31 @@ Experiment with colors, typography, spacing, and component styles.
 
 body {
   color: var(--primary-80);
+  background-color: var(--grey);
   /* font-family is set in framework.css but you can override it here if needed */
 }
 
 /* Heading Styles - Customize sizes, colors, spacing */
 h1, h2, h3, h4, h5, h6 { 
   line-height: 1.1;
-  color: var(--primary-80);
+  color: var(--black);
   /* Add your custom heading styles here */
+  font-family: 'gustavo', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
 }
+
 
 h1 { 
   font-size: 90px;
   /* Try adding: font-weight, color, text-transform, etc. */
+  text-transform: uppercase;
 }
 
 h2 { 
   font-size: 42px;
 }
-
 
 
 h3 { 
@@ -99,6 +105,8 @@ p {
   line-height: 1.5;
   color: var(--primary-80);
   /* Try adjusting: line-height, letter-spacing, margin-bottom */
+  font-family: 'ft-system-mono', mono;
+  color: var(--black);
 }
 
 img + h4,
@@ -129,7 +137,7 @@ section div+div {
 /* Basic Link Styles */
 a {
   text-decoration: none;
-  color: var(--primary-80);
+  color: var(--black);
   transition: all 300ms;
   /* Try adding: border-bottom, font-weight changes, etc. */
 }
@@ -142,7 +150,7 @@ a:hover {
 /* Button Styles - Customize your call-to-action buttons */
 a.button {
   border-radius: 50px;
-  border: 2px solid var(--primary-80);
+  border: 2px solid var(--black);
   padding: 10px 20px 8px;
   display: inline-block;
   margin-top: var(--spacing8x2);
@@ -167,6 +175,11 @@ a.button-highlight {
   color: white;
 }
 
+section a {
+  border-bottom: solid 1.5px var(--black);
+  font-family: 'ft-system-mono', mono;
+}
+
 /* ==========================================================================
    LAYOUT SECTIONS - CUSTOMIZE PAGE STRUCTURE
    ========================================================================== */
@@ -186,11 +199,18 @@ header nav {
 header nav a {
   margin-left: 40px;
   /* Try adding: text-transform, font-weight, padding for button-style nav */
+  font-family: 'gustavo', sans-serif;
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 header nav a.active {
-  border-bottom: 2px solid var(--primary-80);
+  border-bottom: 1.5px solid var(--black);
   padding-bottom: 2px;
+}
+
+.desktop-nav nav .dropdown-menu a {
+  color: var(--black);
 }
 
 
@@ -204,6 +224,11 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   padding: var(--spacing8x3);
+}
+
+#homepage-hero-image .textbox {
+  background: var(--white);
+  border: solid 1.5px var(--black);
 }
 
 #hero-image h1 {
@@ -274,7 +299,7 @@ section p + a.button {
 /* Footer Styles */
 footer {
   width: 100%;
-  background: var(--primary-100);
+  background: var(--grey);
   color: var(--white);
   padding: 40px 20px 20px;
   /* Try customizing: background gradients, text alignment, etc. */
@@ -291,7 +316,7 @@ footer hr {
 }
 
 footer a, footer p {
-  color: var(--secondary-color);
+  color: var(--black);
   font-size: 12px;
 }
 

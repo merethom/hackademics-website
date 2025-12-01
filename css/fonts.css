@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'gustavo';
+    src: url('fonts/gustavo_trial-bold.woff2') format('woff2'),
+         url('fonts/gustavo_trial-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ft-system-mono';
+    src: url('fonts/ftsystemmonotrial-regular.woff2') format('woff2'),
+         url('fonts/ftsystemmonotrial-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+

@@ -49,6 +49,22 @@ Experiment with colors, typography, spacing, and component styles.
 
 
 
+/* Reusable styles */
+
+.white-bg {
+  background: var(--white);
+}
+
+.solid-border {
+  border: solid 1.5px var(--black);
+}
+
+.border-left {
+  border-left: solid 1.5px var(--black);
+}
+
+
+
 
 /* ==========================================================================
    TYPOGRAPHY - CUSTOMIZE FONTS & TEXT STYLES
@@ -112,12 +128,6 @@ p {
 img + h4,
 picture + p {
   margin-top: var(--spacing8x2);
-}
-
-
-
-section div+div {
-  margin-top: var(--spacing8x1);
 }
 
 
@@ -224,11 +234,6 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   padding: var(--spacing8x3);
-}
-
-#homepage-hero-image .textbox {
-  background: var(--white);
-  border: solid 1.5px var(--black);
 }
 
 #hero-image h1 {
@@ -416,28 +421,46 @@ hr {
 }
 
 /* Quote Section */
+
+.quote-bg {
+  background: url('../img/homepage-hero-image.png') no-repeat center center/cover;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: var(--spacing8x3) calc(50vw - 50%);
+  box-sizing: border-box;
+}
+
+.quote-section {
+  background: var(--white);
+  border: solid 1.5px var(--black);
+}
+
 .quote-section blockquote {
   margin: 0;
   padding: 0;
 }
 
 .quote-section blockquote p {
+  font-family: 'gustavo', sans-serif;
   font-size: 24px;
-  font-style: italic;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: var(--spacing8x2);
-  line-height: 1.4;
+  line-height: 1.1;
 }
 
 .quote-section cite {
   font-size: 16px;
-  color: var(--primary-25);
+  font-family: 'ft-system-mono', mono;
+  color: var(--black);
   font-style: normal;
   font-weight: 500;
 }
+
 
 
 iframe {
   aspect-ratio: 16 / 9;
   width: 100% !important;
 }
+

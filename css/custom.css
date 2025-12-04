@@ -57,11 +57,27 @@ html {
 .red { color: var(--red); }
 .blue{ color:var(--blue); }
 .green { color:var(--green); }
+.white { color: var(--white); }
+.grey { color: var(--grey); }
+.black { color: var(--black); }
+
+.white-bg { background-color: var(--white); }
+.grey-bg { background-color: var(--grey); }
+.black-bg { background-color: var(--black); }
+.green-bg { background-color: var(--green); }
+.red-bg { background-color: var(--red); }
+.blue-bg { background-color: var(--blue); }
 
 
 .red-underline { border-color: var(--red); }
 .blue-underline { border-color: var(--blue); }
 .green-underline { border-color: var(--green); }
+
+.black-outline {
+  border: solid 1.5px var(--black);
+}
+
+
 
 
 
@@ -266,10 +282,6 @@ header nav a.active {
   padding: var(--spacing8x3);
 }
 
-#homepage-hero-image .textbox {
-  background: var(--white);
-  border: solid 1.5px var(--black);
-}
 
 #hero-image h1 {
   text-align: center;

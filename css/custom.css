@@ -29,6 +29,10 @@ Experiment with colors, typography, spacing, and component styles.
    DESIGN SYSTEM - CUSTOMIZE YOUR COLORS & BRAND
    ========================================================================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-100: #3A4E6A;
   --primary-80: #486284;
@@ -48,68 +52,18 @@ Experiment with colors, typography, spacing, and component styles.
 }
 
 
+/* Reusable CSS classes */
 
-/* Reusable styles */
-
-.white {color: var(--white)}
-.black {color: var(--black);}
-.grey {color: var(--grey);}
-.green {color: var(--green);}
-.red {color: var(--red);}
-.blue {color: var(--blue);} 
-
-.white-bg {
-  background: var(--white);
-}
-
-.grey-bg {
-  background: var(--grey);
-}
-
-.solid-border {
-  border: solid 1.5px var(--black);
-}
-
-.border-left {
-  border-left: solid 1.5px var(--black);
-}
-
-.border-top {
-  border-top: solid 1.5px var(--black);
-}
-
-.border-bottom {
-  border-bottom: solid 1.5px var(--black);
-}
-
-.black-bar-bottom{
-  border-bottom: solid 16px var(--black);
-}
-
-.black-bar-top {
-  border-top: solid 16px var(--black);
-}
+.red { color: var(--red); }
+.blue{ color:var(--blue); }
+.green { color:var(--green); }
 
 
-.right-align {
-  text-align: right;
-}
+.red-underline { border-color: var(--red); }
+.blue-underline { border-color: var(--blue); }
+.green-underline { border-color: var(--green); }
 
 
-
-
-picture.img-fit {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-img.img-fit {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 
 
@@ -125,7 +79,7 @@ body {
 
 /* Heading Styles - Customize sizes, colors, spacing */
 h1, h2, h3, h4, h5, h6 { 
-  line-height: 0.8;
+  line-height: 1.1;
   color: var(--black);
   /* Add your custom heading styles here */
   font-family: 'gustavo', sans-serif;
@@ -133,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   font-style: normal;
   text-transform: uppercase;
+  line-height: 0.8;
 }
 
 
@@ -151,7 +106,7 @@ h3 {
 }
 
 h4 { 
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 h5 { 
@@ -164,17 +119,29 @@ h6 {
 
 /* Paragraph Styles */
 p {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--primary-80);
   /* Try adjusting: line-height, letter-spacing, margin-bottom */
   font-family: 'ft-system-mono', mono;
   color: var(--black);
 }
 
+section a {
+  font-size: 1rem;
+  line-height: 1.6;
+
+}
+
 img + h4,
 picture + p {
   margin-top: var(--spacing8x2);
+}
+
+
+
+section div+div {
+  margin-top: var(--spacing8x1);
 }
 
 
@@ -235,6 +202,7 @@ a.button-highlight {
 section a {
   border-bottom: solid 1.5px var(--black);
   font-family: 'ft-system-mono', mono;
+  padding-bottom: 3px;
 }
 
 /* ==========================================================================
@@ -242,35 +210,30 @@ section a {
    ========================================================================== */
 
 
-/* Header styles */
-
 header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: var(--grey);
+  border-top: 16px solid var(--black);
+  border-bottom: 1.5px solid var(--black);
   margin: 0;
 }
 
-header .logo {
-  padding: 36px;
-  border-right: solid 1.5px var(--black);
-}
-
-header.desktop-nav {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-
-header.desktop-nav nav {
-  padding-right: 36px;
+   /* Header styles */
+header > a {
+  border-right: 1.5px solid var(--black);
+  padding: 36px 24px;
 }
 
 header img {
-  width: 160px;
+  width: 225px;
   /* Try adjusting: width, border-radius for logo styling */
 }
 
 header nav {
   text-align: right;
   font-size: 15px;
+  padding: 36px 24px;
 }
 
 header nav a {
@@ -301,6 +264,11 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   padding: var(--spacing8x3);
+}
+
+#homepage-hero-image .textbox {
+  background: var(--white);
+  border: solid 1.5px var(--black);
 }
 
 #hero-image h1 {
@@ -345,7 +313,7 @@ header nav a.active {
 }
 
 .callout div {
-  padding: 36px;
+  padding: var(--spacing8x8);
 }
 
 .callout-image {
@@ -371,9 +339,14 @@ section p + a.button {
 /* Footer Styles */
 footer {
   width: 100%;
-  background: var(--grey);
+  background: var(--white);
   color: var(--white);
-  padding: 40px 20px 20px;
+  padding: 20px 36px;
+  border-top: 1.5px solid var(--black);
+  border-bottom: 16px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   /* Try customizing: background gradients, text alignment, etc. */
 }
 
@@ -389,17 +362,43 @@ footer hr {
 
 footer a, footer p {
   color: var(--black);
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 footer nav a { 
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 footer nav a + a {
   margin-left: 40px;
 }
 
+footer nav, footer p {
+  text-align: right;
+}
+
+footer p {
+  text-align: left;
+}
+
+footer a {
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+footer a span {
+  border-bottom: 1.5px solid var(--black);
+  padding-bottom: 2px;
+}
+
+footer a i {
+  border: 1.5px solid var(--black);
+  border-radius: 50%;
+  padding: 10px 12px; 
+}
 
 /* Mobile Footer Adjustments */
 @media only screen and (max-width: 799px) {
@@ -409,6 +408,10 @@ footer nav a + a {
 
   footer img {
     margin: 0 auto;
+  }
+
+  footer a span {
+    display: none;
   }
 }
 
@@ -427,13 +430,6 @@ footer nav a + a {
   border: 2px solid var(--white);
   color: var(--white);
 } 
-
-
-
-.dark-bg-wrapper h2, 
-.dark-bg-wrapper p {
-  color: var(--black)
-}
 
 
    /* Divider Lines */
@@ -472,10 +468,13 @@ hr {
     padding: 18px 24px 14px;
     font-size: 16px;
   }
-
   
   .callout-image {
     height: 33vh;
+  }
+
+  header.desktop-nav nav {
+    display: none;
   }
 
  
@@ -492,43 +491,28 @@ hr {
 }
 
 /* Quote Section */
-
-.quote-bg {
-  background: url('../img/homepage-hero-image.png') no-repeat center center/cover;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: var(--spacing8x3) calc(50vw - 50%);
-  box-sizing: border-box;
-}
-
-.quote-section {
-  background: var(--white);
-  border: solid 1.5px var(--black);
-}
-
 .quote-section blockquote {
   margin: 0;
   padding: 0;
 }
 
 .quote-section blockquote p {
-  font-family: 'gustavo', sans-serif;
   font-size: 3rem;
-  line-height: 1.125rem;
-  color: var(--black);
+  line-height: 1;
+  font-family: 'gustavo', sans-serif;
   margin-bottom: var(--spacing8x2);
-  line-height: 1.1;
+  color: var(--black);
+
 }
 
 .quote-section cite {
-  font-size: 16px;
-  font-family: 'ft-system-mono', mono;
-  color: var(--black);
+  font-size: 1rem;
+  line-height: 1;
   font-style: normal;
   font-weight: 500;
+  font-family: 'ft-system-mono', mono;
+  color: var(--black);
 }
-
 
 
 iframe {
@@ -536,3 +520,88 @@ iframe {
   width: 100% !important;
 }
 
+
+.arrow-icon {
+  display: inline-block;
+  height: 15px;
+  width: auto;
+}
+
+
+/* =====================================================================
+    Mobile Navigation Customization
+   ===================================================================== */
+
+.hamburger-menu {
+  top: 52px;
+  right: 25px;
+  width: 35px;
+}
+
+.hamburger-menu span {
+  background-color: var(--black);
+}
+
+#mobile-nav-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+  background-color: var(--black);
+}
+
+#mobile-nav-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+  background-color: var(--black);
+}
+
+.mobile-nav {
+  font-family: 'gustavo', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  background-color: var(--grey);
+  border-top: solid 16px var(--black);
+  padding: 0;
+  padding-top: 0;
+  grid-template-rows: auto 1fr;
+}
+
+.mobile-nav img {
+  width: 225px;
+  height: auto;
+}
+
+.mobile-nav .logo-container {
+  padding: 30px 36px;
+  border-bottom: solid 1.5px var(--black);
+}
+
+.mobile-nav nav {
+  background-color: var(--white);
+  margin: 0; 
+}
+
+.mobile-nav nav .dropdown label {
+  color: var(--black);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mobile-nav nav a {
+  border-bottom: 1.5px solid var(--black);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.mobile-nav nav svg {
+  height: 24px;
+  width: auto;
+}
+
+.mobile-nav nav .dropdown-menu {
+  background-color: var(--grey);
+  border-bottom: 1.5px solid var(--black);
+}
+
+.mobile-nav nav .dropdown-menu a {
+  text-transform: none;
+  font-size: 1.5rem;
+  border-bottom: none;
+  border-top: 1.5px solid var(--black);
+  padding: 15px 0 15px 36px;
+}

@@ -6,7 +6,7 @@ Link to this file but make all customizations in your custom.css file
 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-/*
+ /*
   ================================================================
   🚫 **COPILOT INSTRUCTIONS FOR framework.css** 🚫
   ================================================================
@@ -29,6 +29,7 @@ Link to this file but make all customizations in your custom.css file
   v2.0 | 20110126
   License: none (public domain)
 ========================================================================== */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -452,7 +453,7 @@ section {
 }
 
 .mobile-nav nav a {
-  color: white;
+  /* color: white; */
   text-decoration: none;
   font-size: 25px;
   display: block;

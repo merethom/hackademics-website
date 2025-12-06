@@ -238,7 +238,7 @@ header {
    /* Header styles */
 header > a {
   border-right: 1.5px solid var(--black);
-  padding: 36px 24px;
+  padding: 24px 36px;
 }
 
 header img {
@@ -249,7 +249,7 @@ header img {
 header nav {
   text-align: right;
   font-size: 15px;
-  padding: 36px 24px;
+  padding: 24px 36px;
 }
 
 header nav a {

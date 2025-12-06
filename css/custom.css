@@ -77,6 +77,10 @@ html {
   border: solid 1.5px var(--black);
 }
 
+.pad36 {
+  padding: 36px;
+}
+
 
 
 
@@ -447,6 +451,14 @@ footer a i {
    COMPONENTS - CUSTOMIZE REUSABLE ELEMENTS
    ========================================================================== */
 
+#home-quote-section {
+  background: url('../img/homepage-hero-image.png') no-repeat center center/cover;
+  border-top: solid 16px var(--black);
+  border-bottom: solid 16px var(--black);
+  padding: 200px;
+}
+
+
 .dark-bg-wrapper h2,
 .dark-bg-wrapper h3,
 .dark-bg-wrapper h4,
@@ -505,6 +517,9 @@ hr {
     display: none;
   }
 
+  #home-quote-section {
+    padding: 36px;
+  }
  
 }
 
@@ -519,6 +534,10 @@ hr {
 }
 
 /* Quote Section */
+.quote-section {
+  margin: 0;
+}
+
 .quote-section blockquote {
   margin: 0;
   padding: 0;

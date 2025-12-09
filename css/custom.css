@@ -77,9 +77,22 @@ html {
   border: solid 1.5px var(--black);
 }
 
-.pad36 {
-  padding: 36px;
+.remove-border-top {border-top: none;}
+.remove-border-bottom {border-bottom: none}
+.remove-border-left {border-left: none;}
+
+@media only screen and (max-width: 799px) {
+  .remove-border-left {border-left: solid 1.5px var(--black);}
 }
+
+.pad36 {padding: 36px;}
+
+.no-gap {gap: 0;}
+.gap36 {margin-bottom: 36px;}
+.gap24 {margin-bottom: 24px;}
+.gap12 {margin-bottom: 12px;}
+
+.right-text {text-align: right;}
 
 
 
@@ -156,12 +169,6 @@ section a {
 img + h4,
 picture + p {
   margin-top: var(--spacing8x2);
-}
-
-
-
-section div+div {
-  margin-top: var(--spacing8x1);
 }
 
 
@@ -300,6 +307,7 @@ header nav a.active {
   align-items: center;
   justify-content: center;
   padding: var(--spacing8x3);
+  border-bottom: solid 16px var(--black);
 }
 
 
@@ -475,7 +483,7 @@ footer a i {
    /* Divider Lines */
 hr {
   border: none;
-  border-bottom: 1.5px solid var(--primary-25);
+  border-bottom: 1.5px solid var(--black);
   /* Try adding: margin, different border styles, gradients */
 }
 
@@ -659,4 +667,148 @@ iframe {
 .mobile-nav nav .dropdown-menu a:hover {
   background-color: var(--black);
   color: var(--white);
+}
+
+
+
+
+/* About Page Styles */
+
+#about-h3 {
+  background: var(--grey);
+  border-bottom: solid 1.5px var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+#about-h3 section {
+  border-left: solid 1.5px var(--black);
+  border-right: solid 1.5px var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#about-h3 h3 {
+  color: var(--black);
+  padding: 30px 36px 36px;
+}
+
+
+@media only screen and (min-width: 800px) {
+  #about-h3 ~ section picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  #about-h3 ~ section picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  #about-h3 ~ section picture {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  #about-h3 ~ section picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+#about-hackathon {
+  background: var(--grey);
+  border-bottom: solid 1.5px var(--black);
+  border-top: solid 16px var(--black);
+  margin: 0;
+  padding: 0;
+} 
+
+#about-hackathon section {
+  border-left: solid 1.5px var(--black);
+  border-right: solid 1.5px var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 72px 36px;
+}
+
+
+#about-hackathon h2,
+#about-hackathon p {
+  color: var(--black);
+}
+
+#about-what-we-do {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 72px 0;
+}
+
+#about-what-we-do p {
+  color: var(--white);
+  font-family: 'Gustavo', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1;
+  padding: 20px 36px 25px;
+}
+
+
+/* Directory page styles */
+
+#directory-h3 {
+  background: var(--grey);
+  border-bottom: solid 1.5px var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+#directory-h3 section {
+  border-left: solid 1.5px var(--black);
+  border-right: solid 1.5px var(--black);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#directory-h3 h3 {
+  color: var(--black);
+  padding: 30px 36px 36px;
+}
+
+#directory-club-members {
+  a {
+    margin-right: 12px;
+  }
+}
+
+
+
+
+
+
+
+/* Things I might delete later */
+
+
+section {
+  margin: 4rem 150px;
+}
+
+@media only screen and (max-width: 1279px) {
+  section {
+    margin: 4rem 36px;
+  }
+}
+
+section.no-vertical-spacing {
+  margin-top: 0;
+  margin-bottom: 0;
 }
